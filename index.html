@@ -47,12 +47,17 @@
     <div class="container">
 
         <h1 class="text-center mt-5">
-            One Piece
-        </h1>
+            One Piece </h1>
 
         <p class="text-center">
             Bienvenidos al mundo de One Piece.
         </p>
+
+        <div class="text-center mb-4">
+            <button class="btn btn-warning" onclick="calcularRecompensa()">
+                Calcular Recompensa
+            </button>
+        </div>
 
         <div class="row g-4">
             <div class="col-md-4">
@@ -83,7 +88,6 @@
                 </div>
 
             </div>
-
 
         <div class="col-md-4">
 
@@ -152,10 +156,6 @@
 
     </footer>
 
-
-</body>
-
-
     <main>
 
         <!-- HISTORIA -->
@@ -171,7 +171,7 @@
             </p>
 
             <img
-                src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23"
+                src="https://tse3.mm.bing.net/th/id/OIP.s2wu6RpUIjO60prnajZbuAHaDt?r=0&rs=1&pid=ImgDetMain&o=7&rm=3.jpg"
                 alt="Mar y barco">
 
         </section>
@@ -301,6 +301,273 @@
 
         </section>
 
+
+        <!-- PRÁCTICA JAVASCRIPT + DOM -->
+
+        <section>
+
+            <h2>🧪 Práctica JavaScript + DOM</h2>
+
+            <p>
+                Ejercicios prácticos para interactuar con distintos elementos
+                HTML usando JavaScript y el DOM.
+            </p>
+
+            
+            <div class="ejercicio">
+                <h2 id="personaje">Selecciona un personaje</h2>
+                <button class="btn btn-primary" onclick="mostrarLuffy()">
+                    Mostrar Luffy
+                </button>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Elige tu tripulación</h2>
+                <label>
+                    <input type="radio" name="tripulacion" value="Sombrero de Paja">
+                    Sombrero de Paja
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="tripulacion" value="Marina">
+                    Marina
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="tripulacion" value="Barbanegra">
+                    Barbanegra
+                </label>
+                <br><br>
+                <button class="btn btn-primary" onclick="mostrarTripulacion()">
+                    Confirmar
+                </button>
+                <p id="resultado"></p>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Habilidades</h2>
+                <label>
+                    <input type="checkbox" id="haki">
+                    Haki
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" id="espada">
+                    Espada
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" id="navegacion">
+                    Navegación
+                </label>
+                <br><br>
+                <button class="btn btn-primary" onclick="mostrarHabilidades()">
+                    Mostrar habilidades
+                </button>
+                <p id="habilidades"></p>
+            </div>
+
+            <div class="ejercicio">
+                <input type="text" id="nombre" placeholder="Escribe tu nombre">
+                <button class="btn btn-primary" onclick="saludar()">
+                    Presentar
+                </button>
+                <p id="mensaje"></p>
+            </div>
+
+            <div class="ejercicio">
+                <input type="number" id="luffy" placeholder="Recompensa Luffy">
+                <input type="number" id="zoro" placeholder="Recompensa Zoro">
+                <button class="btn btn-primary" onclick="calcular()">
+                    Calcular
+                </button>
+                <p id="totalRecompensa"></p>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Email</h2>
+                <input type="email" id="email" placeholder="tu@email.com">
+                <button class="btn btn-primary" onclick="validarEmail()">
+                    Registrar
+                </button>
+                <p id="mensajeEmail"></p>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Password</h2>
+                <input type="password" id="password" placeholder="Contraseña">
+                <button class="btn btn-primary" onclick="ingresar()">
+                    Ingresar
+                </button>
+                <p id="acceso"></p>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Fecha de nacimiento</h2>
+                <input type="date" id="fecha">
+                <button class="btn btn-primary" onclick="mostrarFecha()">
+                    Confirmar
+                </button>
+                <p id="resultadoFecha"></p>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Selecciona tu personaje</h2>
+                <select id="selectPersonaje" class="form-select" style="max-width: 220px; display:inline-block;">
+                    <option value="">Selecciona</option>
+                    <option value="Luffy">Luffy</option>
+                    <option value="Zoro">Zoro</option>
+                    <option value="Nami">Nami</option>
+                </select>
+                <button class="btn btn-primary" onclick="seleccionarPersonaje()">
+                    Seleccionar
+                </button>
+                <p id="resultadoPersonaje"></p>
+            </div>
+
+            <div class="ejercicio">
+                <textarea id="descripcion" rows="4" class="form-control" style="max-width: 400px;"
+                    placeholder="Describe tu personaje"></textarea>
+                <br>
+                <button class="btn btn-primary" onclick="mostrarDescripcion()">
+                    Mostrar
+                </button>
+                <p id="resultadoDescripcion"></p>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Formulario</h2>
+                <form id="formulario">
+                    <input type="text" id="nombreForm" placeholder="Nombre">
+                    <input type="email" id="emailForm" placeholder="Email">
+                    <button type="submit" class="btn btn-primary">
+                        Inscribirse
+                    </button>
+                </form>
+                <p id="resultadoForm"></p>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Imagen</h2>
+                <img id="imagen"
+                    src="https://motionbgs.com/media/1953/monkey-d-luffy-straw-hat2.jpg"
+                    width="200">
+                <br><br>
+                <button class="btn btn-primary" onclick="cambiarImagen()">
+                    Mostrar Zoro
+                </button>
+            </div>
+
+            <div class="ejercicio">
+                <h2>enlace</h2>
+                <a id="enlace" href="https://www.google.com" target="_blank">
+                    Buscar personaje
+                </a>
+                <br><br>
+                <button class="btn btn-primary" onclick="cambiarEnlace()">
+                    Ver información
+                </button>
+            </div>
+
+            <div class="ejercicio">
+                <button class="btn btn-primary" onclick="mostrarInformacion()">
+                    Mostrar información
+                </button>
+                <div id="informacion" style="display:none;">
+                    <h4>Luffy</h4>
+                    <p>Capitán de los Sombrero de Paja.</p>
+                </div>
+            </div>
+
+            <div class="ejercicio">
+                <p>
+                    Recompensa: <span id="recompensa">3000000000</span>
+                </p>
+                <button class="btn btn-primary" onclick="cambiarRecompensa()">
+                    Actualizar recompensa
+                </button>
+            </div>
+
+            <div class="ejercicio">
+                <h3 id="titulo">Selecciona un personaje</h3>
+                <button class="btn btn-primary" onclick="mostrarZoro()">
+                    Zoro
+                </button>
+            </div>
+
+            <div class="ejercicio">
+                <h3>Párrafo</h3>
+                <h4>Luffy</h4>
+                <p id="descripcionPersonaje">Selecciona un personaje.</p>
+                <button class="btn btn-primary" onclick="mostrarDescripcionLuffy()">
+                    Mostrar descripción
+                </button>
+            </div>
+
++            <div class="ejercicio">
+                <h3>Tarjeta</h3>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="nombreCard">Luffy</h5>
+                        <p class="card-text" id="infoCard">Capitán de los Sombrero de Paja.</p>
+                        <button class="btn btn-primary" onclick="cambiarCard()">
+                            Cambiar personaje
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Tabla</h2>
+                <table border="1">
+                    <tr>
+                        <th>Personaje</th>
+                        <th>Recompensa</th>
+                    </tr>
+                    <tbody id="tablaPersonajes">
+                        <tr>
+                            <td>Luffy</td>
+                            <td>3000000000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <button class="btn btn-primary" onclick="agregarPersonaje()">
+                    Agregar Zoro
+                </button>
+            </div>
+
+            <div class="ejercicio">
+                <h2>Lista</h2>
+                <input type="text" id="nuevoIntegrante" placeholder="Nombre del integrante">
+                <button class="btn btn-primary" onclick="agregarIntegrante()">
+                    Agregar
+                </button>
+
+                <input type="text" id="EliminarIntegrante" placeholder="Nombre del integrante">
+                <button class="btn btn-primary" onclick="eliminarIntegrante()">
+                    Eliminar
+                </button>
+                <ul id="tripulacionLista">
+                    <li>Luffy</li>
+                    <li>Zoro</li>
+                    <li>Nami</li>
+                </ul>
+            </div>
+
+            <div class="ejercicio">
+                <div id="tarjeta">
+                    <h3>Monkey D. Luffy</h3>
+                    <p>Capitán de los Sombrero de Paja.</p>
+                </div>
+                <br>
+                <button class="btn btn-primary" onclick="modoPirata()">
+                    Modo Pirata
+                </button>
+            </div>
+
+        </section>
+
     </main>
 
 
@@ -311,6 +578,162 @@
         </p>
 
     </footer>
+
+    <script>
+        function calcularRecompensa(){
+            let luffy = 300000;
+            let zoro = 111100;
+
+            let total = luffy + zoro;
+            alert("La recompensa total es: " + total);
+            console.log(total);
+        }
+
+        function mostrarLuffy() {
+            document.getElementById("personaje").innerHTML = "Monkey D. Luffy";
+        }
+
+        function mostrarTripulacion() {
+            let seleccion = document.querySelector('input[name="tripulacion"]:checked');
+            if (seleccion) {
+                document.getElementById("resultado").innerHTML = "Elegiste: " + seleccion.value;
+            } else {
+                document.getElementById("resultado").innerHTML = "Debes seleccionar una tripulación.";
+            }
+        }
+
+        function mostrarHabilidades() {
+            let habilidades = [];
+            if (document.getElementById("haki").checked) {
+                habilidades.push("Haki");
+            }
+            if (document.getElementById("espada").checked) {
+                habilidades.push("Espada");
+            }
+            if (document.getElementById("navegacion").checked) {
+                habilidades.push("Navegación");
+            }
+            document.getElementById("habilidades").innerHTML = "Habilidades: " + habilidades.join(", ");
+        }
+
+        function saludar() {
+            let nombre = document.getElementById("nombre").value;
+            document.getElementById("mensaje").innerHTML = "Bienvenido, " + nombre;
+        }
+
+        function calcular() {
+            let luffy = Number(document.getElementById("luffy").value);
+            let zoro = Number(document.getElementById("zoro").value);
+            let total = luffy + zoro;
+            document.getElementById("totalRecompensa").innerHTML = "Recompensa total: " + total;
+        }
+
+        function validarEmail() {
+            let email = document.getElementById("email").value;
+            if (email !== "") {
+                document.getElementById("mensajeEmail").innerHTML = "Correo registrado correctamente";
+            } else {
+                document.getElementById("mensajeEmail").innerHTML = "Debes ingresar un correo";
+            }
+        }
+
+        function ingresar() {
+            let password = document.getElementById("password").value;
+            if (password === "onepiece") {
+                document.getElementById("acceso").innerHTML = "¡Bienvenido a bordo!";
+            } else {
+                document.getElementById("acceso").innerHTML = "Contraseña incorrecta";
+            }
+        }
+
+        function mostrarFecha() {
+            let fecha = document.getElementById("fecha").value;
+            document.getElementById("resultadoFecha").innerHTML = "Te incorporaste el: " + fecha;
+        }
+
+        function seleccionarPersonaje() {
+            let personaje = document.getElementById("selectPersonaje").value;
+            document.getElementById("resultadoPersonaje").innerHTML = "Elegiste a: " + personaje;
+        }
+
+        function mostrarDescripcion() {
+            let descripcion = document.getElementById("descripcion").value;
+            document.getElementById("resultadoDescripcion").innerHTML = descripcion;
+        }
+
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let nombre = document.getElementById("nombreForm").value;
+            let email = document.getElementById("emailForm").value;
+            if (nombre !== "" && email !== "") {
+                document.getElementById("resultadoForm").innerHTML = "¡Inscripción realizada!";
+            } else {
+                document.getElementById("resultadoForm").innerHTML = "Completa todos los campos.";
+            }
+        });
+
+        function cambiarImagen() {
+            document.getElementById("imagen").src =
+                "https://i.pinimg.com/originals/12/23/b3/1223b31f460efb11d232622ec72317c3.jpg";
+        }
+
+        function cambiarEnlace() {
+            let enlace = document.getElementById("enlace");
+            enlace.innerHTML = "Información de One Piece";
+            enlace.href = "https://one-piece.com/";
+        }
+
+        function mostrarInformacion() {
+            document.getElementById("informacion").style.display = "block";
+        }
+
+        function cambiarRecompensa() {
+            document.getElementById("recompensa").innerHTML = "4000000000";
+        }
+
+        function mostrarZoro() {
+            document.getElementById("titulo").innerHTML = "Roronoa Zoro";
+        }
+
+        function mostrarDescripcionLuffy() {
+            document.getElementById("descripcionPersonaje").innerHTML =
+                "Luffy es el capitán de los Sombrero de Paja.";
+        }
+
+        function cambiarCard() {
+            document.getElementById("nombreCard").innerHTML = "Roronoa Zoro";
+            document.getElementById("infoCard").innerHTML = "Espadachín de los Sombrero de Paja.";
+        }
+
+        function agregarPersonaje() {
+            let fila = document.createElement("tr");
+            fila.innerHTML = "<td>Zoro</td><td>1111000000</td>";
+            document.getElementById("tablaPersonajes").appendChild(fila);
+        }
+
+        function agregarIntegrante() {
+            let nombre = document.getElementById("nuevoIntegrante").value;
+            let nuevo = document.createElement("li");
+            nuevo.innerHTML = nombre;
+            document.getElementById("tripulacionLista").appendChild(nuevo);
+        }
+
+        function eliminarIntegrante() {
+            let nombre = document.getElementById("EliminarIntegrante").value.trim();
+
+            document.querySelectorAll("#tripulacionLista li").forEach(li => {
+                if (li.textContent.trim() === nombre) {
+                    li.remove();
+                }
+            });
+
+            document.getElementById("EliminarIntegrante").value = "";
+        }
+
+        function modoPirata() {
+            document.getElementById("tarjeta").classList.toggle("pirata");
+        }
+    </script>
 
 </body>
 
