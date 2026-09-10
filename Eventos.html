@@ -1,0 +1,112 @@
+<html>
+
+
+
+<head>
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+ <input type="text" id="nombre">
+
+ <p id="errorNombre" class="mensaje-error"></p>
+
+ <p id="mensaje"></p>
+
+
+
+     <!-- Edad -->
+
+    <label for="edad">Edad:</label>
+
+    <input type="number" id="edad">
+
+  <p id="mensajeEDAD"></p>
+
+    <br><br>
+
+  <button type="button" id="btnClick">
+
+    Validar con CLICK
+  </button>
+
+  <!--Email-->
+  <label for="email"> email:</label>
+  <input type="text" id="email">
+  <p id="errorEmail" class="mensaje-error"></p>
+  <br><br>
+
+  <p id="mensajeEmail"></p>
+
+
+<script>
+
+    const nombre = document.getElementById("nombre");
+    const boton = document.getElementById("btnClick");
+    const edad = document.getElementById("edad")
+    const email= document.getElementById("email")
+    const mensaje = document.getElementById("mensaje");
+    const mensajeEdad = document.getElementById("mensajeEDAD")
+    const valorEmail = email.value.trim()
+    const errorEmail= document.getElementById("errorEmail")
+
+
+
+    boton.addEventListener("click", function() {
+
+
+
+
+
+    // Elimina espacios al principio y final.
+
+    if (nombre.value.trim() == "") {
+
+      mensaje.textContent = "Debes ingresar tu nombre";
+
+    } 
+
+    else {
+
+      mensaje.textContent = "Nombre correcto";
+    }
+
+    if (edad.value.trim() == "") {
+
+      mensajeEdad.textContent = "Debes edad ";
+
+    } 
+
+    else {
+
+      mensajeEdad.textContent = "edad correcto";
+    }
+    if (!valorEmail.include("@")){
+
+        errorEmail.textContent="el email debe tener @!";
+
+    }
+    else{
+        errorEmail.textContent="email correcto";
+    }
+
+
+
+    });
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
